@@ -1,0 +1,2528 @@
+'<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zahra's Cakes</title>
+
+<style>
+button:hover{
+background:#d63384;
+transform:scale(1.05);
+transition:0.3s;
+    }
+    
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#fff8f5;
+}
+
+header{
+background:#ffffff;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo span{
+font-size:35px;
+}
+
+.logo-text h1{
+margin:0;
+font-size:24px;
+color:#d63384;
+}
+
+.logo-text p{
+margin:0;
+font-size:12px;
+color:#777;
+font-style:italic;
+  }
+
+nav{
+display:flex;
+gap:25px;
+align-items:center;
+  }
+
+nav a{
+text-decoration:none;
+font-weight:bold;
+color:#444;
+padding:8px 12px;
+border-radius:20px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#d63384;
+color:white;
+  }
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+section{
+text-align:center;
+padding:50px 20px;
+}
+
+h2{
+font-size:40px;
+color:#d63384;
+}
+
+p{
+font-size:20px;
+color:#555;
+}
+
+button{
+background:#ff69b4;
+color:white;
+border:none;
+padding:15px 35px;
+font-size:20px;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#d63384;
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+  }
+    
+.cakes{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#fff;
+border-radius:18px;
+padding:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+transition:all .3s ease;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+    .hero{
+animation: fadeIn 1s ease;
+}
+
+.card{
+animation: slideUp 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+    }
+
+.card h3{
+color:#d63384;
+}
+
+.card p{
+font-size:16px;
+}
+    .card p{
+font-size:16px;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+  }
+    .card p{
+line-height:1.6;
+}
+
+.card h3{
+margin-top:10px;
+    }
+
+    section:last-child{
+background:#ffe4ec;
+padding:60px 20px;
+}
+
+section:last-child p{
+font-size:18px;
+margin:10px 0;
+    }
+
+    footer{
+background:#d63384;
+color:white;
+text-align:center;
+padding:30px 20px;
+margin-top:40px;
+}
+
+footer h2{
+color:white;
+margin-bottom:10px;
+}
+
+footer p{
+color:white;
+font-size:16px;
+margin:8px 0;
+    }
+  
+.hero{
+background-image:url("https://images.unsplash.com/photo-1578985545062-69928b1d9587");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+position:relative;
+text-align:center;
+}
+
+.hero .overlay{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+  }
+
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
+line-height:1.3;
+text-shadow:2px 2px 10px rgba(0,0,0,.3);
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+}
+  
+.card{
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 18px 35px rgba(0,0,0,.2);
+  }
+  
+    .whatsapp{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+text-decoration:none;
+
+color:white;
+
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+
+transition:0.3s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.15);
+
+background:#1ebe5d;
+
+  }
+html{
+scroll-behavior:smooth;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+overflow-x:hidden;
+}
+
+nav a{
+transition:0.3s;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.card img{
+transition:transform .4s ease;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+  
+@media(max-width:768px){
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.card{
+width:90%;
+}
+
+  }
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin:30px 0;
+}
+
+.categories button{
+background:#ffffff;
+color:#d63384;
+border:2px solid #d63384;
+padding:12px 20px;
+border-radius:30px;
+font-size:16px;
+font-weight:bold;
+transition:.3s;
+}
+
+.categories button:hover{
+background:#d63384;
+color:white;
+transform:scale(1.05);
+  }
+.price{
+font-size:22px;
+font-weight:bold;
+color:#d63384;
+margin:10px 0;
+}
+
+.buy-btn{
+display:inline-block;
+background:#d63384;
+color:white;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:all .3s ease;
+box-shadow:0 4px 10px rgba(214,51,132,.3);
+}
+
+.buy-btn:hover{
+background:#b82d70;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(214,51,132,.4);
+}
+  
+.featured{
+padding:60px 20px;
+text-align:center;
+}
+
+.featured-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:35px;
+}
+
+.featured-card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.3s;
+padding-bottom:20px;
+cursor:pointer;
+  }
+
+.featured-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  }
+
+.featured-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.featured-card h3{
+margin:15px 0 5px;
+color:#d63384;
+}
+
+.featured-card .price{
+font-size:20px;
+font-weight:bold;
+color:#333;
+margin-bottom:15px;
+      }
+    
+.welcome{
+font-size:18px;
+color:white;
+letter-spacing:2px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:25px;
+  }
+  
+h1{
+color:#d63384;
+font-size:28px;
+margin:0;
+}
+
+nav{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d63384;
+  }
+    
+.badge{
+display:inline-block;
+background:#ff4081;
+color:white;
+padding:8px 18px;
+border-radius:25px;
+font-size:15px;
+font-weight:bold;
+margin:15px auto;
+  }
+
+footer{
+background:#d63384;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:50px;
+}
+
+footer h3{
+margin-bottom:10px;
+font-size:28px;
+color:white;
+}
+
+footer p{
+margin:8px 0;
+color:white;
+}
+
+footer hr{
+margin:20px auto;
+width:80%;
+border:1px solid rgba(255,255,255,.3);
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+margin:20px 0;
+flex-wrap:wrap;
+}
+
+.socials a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.socials a:hover{
+color:#ffe082;
+    }
+  
+#reviews h3{
+color:#FFD700;
+font-size:22px;
+margin-bottom:5px;
+}
+
+#reviews h4{
+color:#d63384;
+font-size:20px;
+margin-bottom:10px;
+}
+
+#reviews .card{
+text-align:center;
+  }
+  
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+font-size:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+transition:.3s;
+}
+
+.floating-whatsapp:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+  }
+
+  html{
+scroll-behavior:smooth;
+  }
+
+  section h2{
+text-align:center;
+font-size:32px;
+color:#d63384;
+margin-bottom:30px;
+position:relative;
+}
+
+section h2::after{
+content:"";
+display:block;
+width:70px;
+height:4px;
+background:#ffb6c1;
+margin:10px auto;
+border-radius:20px;
+}
+
+  .menu-btn{
+display:none;
+font-size:28px;
+background:none;
+border:none;
+cursor:pointer;
+color:#d63384;
+}
+
+@media(max-width:768px){
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.menu-btn{
+display:block;
+}
+
+nav{
+display:none;
+width:100%;
+margin-top:15px;
+}
+
+nav a{
+display:block;
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+  }
+
+  .search-box{
+text-align:center;
+margin:30px 0;
+}
+
+.search-box input{
+width:90%;
+max-width:450px;
+padding:15px;
+border:2px solid #d63384;
+border-radius:30px;
+font-size:16px;
+outline:none;
+  }
+
+.cart{
+background:#d63384;
+color:white;
+padding:10px 15px;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+  }
+
+  .toast{
+position:fixed;
+top:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+opacity:0;
+pointer-events:none;
+transition:.4s;
+z-index:9999;
+}
+
+.toast.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.toast{
+transform:translateY(-20px);
+  }
+
+  .cart-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.cart-content{
+background:white;
+width:90%;
+max-width:400px;
+padding:20px;
+border-radius:15px;
+text-align:center;
+max-height:80vh;
+overflow:auto;
+}
+
+.cart-content h2{
+margin-top:0;
+color:#d63384;
+}
+
+.cart-content button{
+width:100%;
+margin-top:10px;
+    }
+
+  .hero h2,
+.hero p{
+color:white;
+  }
+
+  .favorite-btn{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:none;
+border-radius:8px;
+background:#eee;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.favorite-btn.active{
+background:#ff4d6d;
+color:white;
+  }
+
+    body.dark-mode{
+background:#121212;
+color:white;
+}
+
+body.dark-mode header{
+background:#1e1e1e;
+}
+
+body.dark-mode .card{
+background:#222;
+color:white;
+}
+
+body.dark-mode .price{
+color:#ffb347;
+}
+
+body.dark-mode footer{
+background:#1e1e1e;
+}
+
+#dark-mode-btn{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+background:#fff;
+    }
+
+    .rating{
+margin:10px 0;
+text-align:center;
+}
+
+.rating span{
+font-size:20px;
+color:gold;
+}
+
+.rating p{
+font-size:14px;
+color:#777;
+margin-top:5px;
+}
+
+  .product{
+overflow:hidden;
+}
+
+.product img{
+transition:0.4s;
+cursor:pointer;
+}
+
+.product:hover img{
+transform:scale(1.1);
+}
+
+    @keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.whatsapp-float{
+animation:pulse 2s infinite;
+    }
+
+  #topBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#d63384;
+color:white;
+font-size:20px;
+cursor:pointer;
+display:none;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+z-index:999;
+transition:.3s;
+}
+
+#topBtn{
+bottom:100px;
+right:25px;
+    }
+
+  .stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+padding:60px 20px;
+text-align:center;
+}
+
+.stat-box{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.stat-box h2{
+font-size:40px;
+color:#d63384;
+margin-bottom:10px;
+}
+
+.stat-box p{
+font-size:16px;
+font-weight:bold;
+  }
+
+  .testimonials{
+padding:60px 20px;
+text-align:center;
+}
+
+.testimonial{
+max-width:600px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.testimonial p{
+font-size:18px;
+font-style:italic;
+margin-bottom:20px;
+}
+
+.testimonial h4{
+color:#d63384;
+  }
+
+  .testimonial-intro{
+max-width:700px;
+margin:15px auto 40px;
+font-size:17px;
+line-height:1.8;
+color:#666;
+text-align:center;
+    }
+
+  .fade{
+opacity:1;
+transform:translateY(0);
+transition:all .8s ease;
+  }
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+    }
+
+.filter-btn.active{
+background:#d63384;
+color:white;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.categories button{
+padding:10px 18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+background:#f2f2f2;
+transition:.3s;
+}
+
+.categories button:hover{
+background:#d63384;
+color:white;
+  }
+
+  #lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:10000;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+  }
+
+    #loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.spinner{
+width:60px;
+height:60px;
+border:6px solid #f3f3f3;
+border-top:6px solid #d63384;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+  }
+
+  .view-btn{
+width:100%;
+margin-bottom:10px;
+padding:12px;
+background:#444;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.view-btn:hover{
+background:#d63384;
+  }
+
+    body.dark-mode .cart-content{
+    background:#222;
+    color:white;
+}
+
+body.dark-mode .cart-content h2,
+body.dark-mode .cart-content h3,
+body.dark-mode .cart-content p,
+body.dark-mode .cart-content strong{
+    color:white;
+}
+
+body.dark-mode #cart-total{
+    color:#ffb347;
+}
+
+                           /* Featured cards in dark mode */
+body.dark-mode .featured-card{
+    background:#222;
+    color:white;
+}
+
+body.dark-mode .featured-card h3{
+    color:#ff69b4;
+}
+
+body.dark-mode .featured-card p{
+    color:#ddd;
+}
+
+body.dark-mode .badge{
+    background:#ff4081;
+    color:white;
+}
+
+  body.dark-mode nav a{
+    color:white;
+}
+
+body.dark-mode .logo-text p{
+    color:#ccc;
+}
+  
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<span>🎂</span>
+
+<div class="logo-text">
+<h1>Zahra's Cakes</h1>
+<p>Handcrafted with Love ❤️</p>
+</div>
+
+</div>
+
+  <button class="menu-btn">☰</button>
+
+<nav id="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#shop">Shop</a>
+<a href="#faq">FAQ</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+  <button id="dark-mode-btn">🌙</button>
+
+  <div class="cart" id="cart">
+🛒 Cart (<span id="cart-count">0</span>)
+  </div>
+
+</header>
+
+<section id="home" class="hero fade">
+
+<div class="overlay">
+
+<p class="welcome">✨ Welcome to Zahra's Cakes & Gifts ✨</p>
+
+<h2>Handcrafted Cakes & Personalized Gifts 🎂🎁</h2>
+
+<p>Celebrate every special moment with delicious cakes,
+beautiful gift packages, customized shirts, frames,
+teddy gifts, and more — all made with love.</p>
+
+<div class="hero-buttons">
+
+<a href="#shop">
+<button>🛍️ Shop Now</button>
+</a>
+
+<a href="https://wa.me/2348107081375">
+<button>🛒 Start Shopping</button>
+</a>
+
+</div>
+
+</div>
+
+</section>
+  
+<section id="about" class="about fade">
+
+<h2>About Zahra's Cakes</h2>
+
+<div class="cakes">
+
+<div class="card">
+
+<h3>👩‍🍳 Handcrafted With Love</h3>
+
+<p>
+Every cake is baked fresh using premium ingredients,
+creative designs, and lots of love.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎉 For Every Occasion</h3>
+
+<p>
+Birthdays, weddings, anniversaries, graduations,
+and all your special celebrations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+  
+<section class="featured">
+
+<h2>🔥 Best Sellers</h2>
+
+<p>Our customers' most loved products.</p>
+
+<div class="featured-grid">
+
+<div class="featured-card">
+  
+<span class="badge">🔥 Best Seller</span>
+  
+<img src="birthdaycake.jpg" alt="Birthday Cake">
+
+<h3>🎂 Birthday Cake</h3>
+
+<p class="price">₦18,000</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Birthday Cake">
+🛒 Add to Cart
+</a>
+
+</div>
+
+<div class="featured-card">
+
+<span class="badge">🔥 Best Seller</span>
+  
+<img src="Treatboxes.jpg" alt="Treat Box">
+
+<h3>🎁 Treat Box</h3>
+
+<p class="price">₦15,000</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Treat Box">
+🛒 Add to Cart
+</a>
+
+</div>
+
+<div class="featured-card">
+
+  <span class="badge">🔥 Best Seller</span>
+
+<img src="customizedshirt.jpg" alt="Customized Shirt">
+
+<h3>👕 Customized Shirt</h3>
+
+<p class="price">From ₦8,000</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Custom Shirt">
+🛒 Add to Cart
+</a>
+  
+</div>
+
+<div class="featured-card">
+
+<img src="Teddy.jpg" alt="Teddy Gift">
+
+  <span class="badge">🔥 Best Seller</span>
+
+<h3>🧸 Teddy Gift</h3>
+
+<p class="price">From ₦12,000</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Teddy Gift">
+🛒 Add to Cart
+</a>
+  
+</div>
+
+</div>
+
+</section>
+  
+  <section id="shop" class="shop fade">
+
+<h2>🛍️ Shop Our Products</h2>
+
+    <div class="search-box">
+
+<input type="text" id="searchInput" placeholder="🔍 Search products...">
+
+    </div>
+
+<p style="text-align:center; color:#666; font-size:18px;">
+Freshly baked treats and customized gifts made with love ❤️
+</p>
+<div class="categories">
+
+<button class="filter-btn" data-filter="all">All</button>
+
+<button class="filter-btn" data-filter="cake">🍰 Cakes</button>
+
+<button class="filter-btn" data-filter="package">🎁 Gift Packages</button>
+
+<button class="filter-btn" data-filter="dessert">🍨 Desserts</button>
+
+<button class="filter-btn" data-filter="gift">🧸 Teddy Gifts</button>
+
+<button class="filter-btn" data-filter="shirt">👕 Customized Shirts</button>
+
+<button class="filter-btn" data-filter="frame">🖼️ Frames</button>
+
+</div>
+    
+<h2 id="cakes">🎂 Cakes</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="cake">
+
+<img src="birthdaycake.jpg" alt="Birthday Cake">
+
+<h3>🎂 Birthday Cake</h3>
+
+<p class="price">₦18,000</p>
+  
+<p>Beautiful custom birthday cakes made for your special celebrations.</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Birthday Cake">
+🛒 Add to Cart
+</a>
+
+</div>
+
+<div class="card product" data-category="cake">
+
+<img src="weddingcake.jpg" alt="Wedding Cake">
+
+<h3>💍 Wedding Cake</h3>
+
+<p class="price">₦45,000</p>
+
+<p>Elegant wedding cakes designed to make your special day unforgettable.</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Wedding Cake">
+🛒 Add to Cart
+</a>
+
+</div>
+
+<div class="card product" data-category="cake">
+
+<img src="chocolatecake.jpg" alt="Chocolate Cake">
+
+<h3>🍫 Chocolate Cake</h3>
+
+<p class="price">₦25,000</p>
+
+<p>Rich, moist chocolate cake made with premium ingredients.</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Chocolate Cake">
+🛒 Add to Cart
+</a>
+
+</div>
+
+<div class="card product" data-category="cake">
+
+<img src="customcake.jpg" alt="Custom Cake">
+
+<h3>🎉 Custom Cake</h3>
+
+<p class="price">From ₦30,000</p>
+
+<p>Personalized cakes designed for your special occasions.</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Custom Cake">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+
+<h2 id="cupcakes">🧁 Cupcakes</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="dessert">
+
+<img src="cupcake.jpeg" alt="Cupcakes">
+
+<h3>🧁 Cupcakes</h3>
+
+<p class="price">From ₦8,000</p>
+
+<p>
+Freshly baked cupcakes, perfect for birthdays, parties, and sweet treats.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Cupcakes">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+  
+ <h2 id="desserts">🍨 Desserts</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="dessert">
+
+<img src="perfait.jpg" alt="Perfait">
+
+<h3>🍨 Perfait</h3>
+
+<p class="price">₦5,000</p>
+
+<p>
+Creamy, layered parfait made with fresh fruits, biscuits, and delicious cream.
+Perfect for every sweet craving.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Parfait">
+🛒 Add to Cart
+</a>
+
+</div>
+  
+  <div class="card product" data-category="package">
+
+<img src="Treatboxes.jpg" alt="Treat Box">
+
+<h3>🎁 Treat Box</h3>
+
+<p class="price">₦15,000</p>
+
+<p>
+A beautiful gift package perfect for birthdays, surprises and celebrations.
+</p>
+
+    <button class="favorite-btn">🤍 Favorite</button>
+
+    <button class="view-btn">
+👁 Quick View
+    </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Treat Box">
+🛒 Add to Cart
+</a>
+
+  </div>
+
+  <h2 id="shirts">👕 Customized Shirts</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="shirt">
+
+<img src="customizedshirt.jpg" alt="Customized Shirt">
+
+<h3>👕 Customized Shirt</h3>
+
+<p class="price">From ₦8,000</p>
+
+<p>
+Custom-designed shirts for birthdays, businesses, couples, graduations, and every special occasion.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Customized Shirt">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+
+  <h2 id="frames">🖼️ Customized Frames</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="frame">
+
+<img src="frames.jpg" alt="Customized Frame">
+
+<h3>🖼️ Customized Frame</h3>
+
+<p class="price">From ₦10,000</p>
+
+<p>
+Beautiful customized photo frames designed to preserve your precious memories and make thoughtful gifts.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Customized Frame">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+
+  <h2 id="teddy">🧸 Teddy Gifts</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="gift">
+
+<img src="Teddy.jpg" alt="Teddy Gift">
+
+<h3>🧸 Teddy Gift</h3>
+
+<p class="price">From ₦12,000</p>
+
+<p>
+Soft and adorable teddy gifts, perfect for birthdays, anniversaries, Valentine's Day, and special surprises.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Teddy Gift">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+
+  <h2 id="surprise">🎈 Surprise Packages</h2>
+
+<div class="cakes">
+
+<div class="card product" data-category="gift">
+
+<img src="hotair.jpg" alt="Surprise Package">
+
+<h3>🎈 Surprise Package</h3>
+
+<p class="price">From ₦35,000</p>
+
+<p>
+Create unforgettable memories with our beautifully arranged surprise packages, perfect for birthdays, proposals, anniversaries, and other special occasions.
+</p>
+
+  <button class="favorite-btn">🤍 Favorite</button>
+
+  <button class="view-btn">
+👁 Quick View
+  </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Surprise Package">
+🛒 Add to Cart
+</a>
+
+</div>
+
+</div>
+
+  <div class="card product" data-category="gift">
+
+<img src="package.jpg" alt="Luxury Gift Box">
+
+<h3>🎀 Luxury Gift Box</h3>
+
+<p class="price">₦20,000</p>
+
+<p>
+A premium gift package beautifully arranged for birthdays, anniversaries, graduations, and unforgettable surprises.
+</p>
+
+    <button class="favorite-btn">🤍 Favorite</button>
+
+    <button class="view-btn">
+👁 Quick View
+    </button>
+
+<a href="#" class="buy-btn add-cart" data-product="Luxury Gift Box">
+🛒 Add to Cart
+</a>
+
+  </div>
+
+  <div class="card product" data-category="gift">
+
+<img src="package 1.jpg" alt="Premium Surprise Box">
+
+<h3>💝 Premium Surprise Box</h3>
+
+<p class="price">₦25,000</p>
+
+<p>
+A premium surprise package beautifully prepared to make your loved ones smile on their special day.
+</p>
+
+    <button class="favorite-btn">🤍 Favorite</button>
+
+<a href="#" class="buy-btn add-cart" data-product="Premium Surprise Box">
+🛒 Add to Cart
+</a>
+
+  </div>
+
+  <div class="card product" data-category="gift">
+
+<img src="packages2.jpg" alt="Celebration Gift Package">
+
+<h3>🎊 Celebration Gift Package</h3>
+
+<p class="price">₦30,000</p>
+
+<p>
+A complete celebration package filled with thoughtful gifts, perfect for birthdays, graduations, anniversaries and more.
+</p>
+
+    <button class="favorite-btn">🤍 Favorite</button>
+
+<a href="#" class="buy-btn add-cart" data-product="Celebration Gift Package">
+🛒 Add to Cart
+</a>
+
+  </div>
+
+</div>
+    
+  </section>
+
+<section id="reviews" class="reviews fade">
+
+<h2>⭐⭐⭐⭐⭐ Customer Reviews</h2>
+
+<div class="cakes">
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>😊 Sarah</h4>
+<p>"Absolutely delicious! My birthday cake was beautiful and tasted amazing."</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (112 Reviews)</p>
+
+</div>
+
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>🥰 Aisha</h4>
+<p>"Fast delivery and excellent customer service. Highly recommended!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (165 Reviews)</p>
+
+</div>
+  
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>🎉 David</h4>
+<p>"The wedding cake was perfect. Everyone loved it!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (131 Reviews)</p>
+
+</div>
+  
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>💖 Blessing</h4>
+<p>"The treat box was beautifully arranged. My sister couldn't stop smiling!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (118 Reviews)</p>
+
+</div>
+  
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>😍 Michael</h4>
+<p>"The customized shirt came out exactly the way I wanted. Great quality!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (98 Reviews)</p>
+
+</div>
+ 
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>🎁 Esther</h4>
+<p>"Their surprise package made my husband's birthday unforgettable. Thank you!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (80 Reviews)</p>
+
+</div>
+  
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐⭐</h3>
+<h4>🌹 Joy</h4>
+<p>"I ordered a customized frame, and it was absolutely beautiful. Excellent work!"</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (178 Reviews)</p>
+
+</div>
+  
+</div>
+
+<div class="card">
+  <h3>⭐⭐⭐⭐</h3>
+<h4>🥳 Daniel</h4>
+<p>"Professional service, affordable prices, and everything was delivered on time."</p>
+
+<div class="rating">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>4.9 (128 Reviews)</p>
+
+</div>
+  
+</div>
+
+</div>
+
+</section>
+
+<section id="faq" class="faq fade">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<div class="cakes">
+
+<div class="card">
+<h3>🎂 How do I place an order?</h3>
+<p>Click any "Order on WhatsApp" button and send us your order details.</p> 
+</div>
+
+<div class="card">
+<h3>🚚 Do you offer delivery?</h3>
+<p>Yes! We deliver within town and nearby locations. Delivery charges may apply.</p>  
+</div>
+
+<div class="card">
+<h3>💳 How do I make payment?</h3>
+<p>Payment can be made via bank transfer before your order is processed.</p>
+</div>
+
+<div class="card">
+<h3>📅 How early should I order?</h3>
+<p>We recommend placing your order at least 24–72 hours before your event.</p>
+</div>
+
+</section>
+
+  <section class="stats fade">
+
+<div class="stat-box">
+<h2 class="counter" data-target="500">0</h2>
+<p>🎂 Cakes Delivered</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="300">0</h2>
+<p>😊 Happy Customers</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="5">0</h2>
+<p>⭐ Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="1000">0</h2>
+<p>🎁 Gifts Delivered</p>
+</div>
+
+  </section>
+
+  <section class="testimonials fade">
+<h2>💬 What Our Customers Say</h2>
+
+<p class="testimonial-intro">
+We are grateful for the love and trust our amazing customers have shown us. Every cake, gift, and surprise package is made with care and passion. Here's what some of our happy customers have to say about their experience with Zahra's Cakes & Gifts. ❤️
+</p>
+
+<div class="testimonial">
+
+<p id="testimonial-text">
+"The birthday cake was absolutely beautiful, delicious, and delivered right on time. I couldn't have asked for a better experience!"
+</p>
+
+<h4 id="testimonial-name">
+— Blessing A.
+</h4>
+
+</div>
+
+  </section>
+
+<section id="contact" class="contact fade">
+
+<h2>📞 Contact Us</h2>
+
+<div class="cakes">
+
+<div class="card">
+
+<h3>📱 WhatsApp</h3>
+
+<p>Chat with us directly to place your order.</p>
+
+<a href="https://wa.me/2348107081375" class="buy-btn">
+💬 Chat on WhatsApp
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📍Location</h3>
+
+<p>Warri, Delta State</p>
+
+</div>
+
+<div class="card">
+
+<h3>⏰ Business Hours</h3>
+
+<p>
+Monday – Saturday<br>
+8:00 AM – 6:00 PM
+</p>
+
+</div>
+
+</div>
+
+  </section>
+  
+<footer>
+
+<h3>🎂 Zahra's Cakes & Gifts</h3>
+
+<p>Creating sweet memories, one order at a time. ❤️</p>
+
+<p>📞 WhatsApp: +234 810 708 1375</p>
+
+<p>📍 Nigeria</p>
+
+<div class="socials">
+
+<a href="#">📘 Facebook</a>
+
+<a href="#">📸 Instagram</a>
+
+<a href="#">🎵 TikTok</a>
+
+</div>
+
+<hr>
+
+<p>© 2026 Zahra's Cakes & Gifts. All Rights Reserved.</p>
+
+<p>Designed with ❤️ by Junior</p>
+
+</footer>
+  <a href="https://wa.me/2348107081375" class="floating-whatsapp">
+📱
+  </a>
+
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.getElementById("menu");
+
+menuBtn.onclick = function(){
+
+if(menu.style.display=="block"){
+
+menu.style.display="none";
+
+}else{
+
+menu.style.display="block";
+
+}
+
+}
+
+</script>
+
+  <script>
+
+const searchInput = document.getElementById("searchInput");
+
+const products = document.querySelectorAll(".product");
+
+searchInput.addEventListener("keyup", function(){
+
+const value = searchInput.value.toLowerCase();
+
+products.forEach(function(product){
+
+if(product.innerText.toLowerCase().includes(value)){
+
+product.style.display="block";
+
+}else{
+
+product.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", function(){
+
+const cartButtons = document.querySelectorAll(".add-cart");
+const cartCount = document.getElementById("cart-count");
+const cartBox = document.getElementById("cart");
+const toast = document.getElementById("toast");
+const cartModal = document.getElementById("cart-modal");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const checkoutBtn = document.getElementById("checkout-btn");
+const closeCart = document.getElementById("close-cart");
+
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+  function updateCartCount(){
+
+let total = 0;
+
+for(let item in cart){
+    total += cart[item];
+}
+
+cartCount.innerText = total;
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+  }
+
+updateCartCount();
+
+const prices = {
+"Birthday Cake":18000,
+"Wedding Cake":45000,
+"Chocolate Cake":25000,
+"Custom Cake":30000,
+"Cupcakes":8000,
+"Parfait":5000,
+"Treat Box":15000,
+"Luxury Gift Box":20000,
+"Premium Surprise Box":25000,
+"Celebration Gift Package":30000,
+"Customized Shirt":8000,
+"Customized Frame":10000,
+"Teddy Gift":12000,
+"Surprise Package":35000
+};
+
+cartButtons.forEach(function(button){
+
+button.addEventListener("click", function(e){
+
+e.preventDefault();
+
+const product = button.dataset.product;
+
+if(cart[product]){
+cart[product]++;
+}else{
+cart[product]=1;
+}
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+let total = 0;
+
+for(let item in cart){
+total += cart[item];
+}
+
+cartCount.innerText = total;
+
+toast.innerText = "✅ " + product + " added to cart";
+
+toast.classList.add("show");
+
+setTimeout(function(){
+toast.classList.remove("show");
+},2000);
+
+});
+
+});
+
+cartBox.addEventListener("click", function(){
+
+let totalItems = 0;
+
+for(let item in cart){
+totalItems += cart[item];
+}
+
+if(totalItems === 0){
+alert("Your cart is empty 🛒");
+return;
+}
+
+cartItems.innerHTML = "";
+
+let grandTotal = 0;
+let message = "Assalamu Alaikum,%0A%0AI'd like to order:%0A%0A";
+let number = 1;
+
+for(let item in cart){
+
+let subtotal = prices[item] * cart[item];
+
+grandTotal += subtotal;
+
+cartItems.innerHTML +=
+"<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;border-bottom:1px solid #ddd;padding-bottom:10px;'>"
+
++
+
+"<div>"
+
++
+
+"<strong>"+item+"</strong><br>"
+
++
+
+"<div style='display:flex;align-items:center;gap:10px;'>"
+
++
+
+"<button class='minus' data-product='"+item+"' style='width:35px;height:35px;'>➖</button>"
+
++
+
+"<span>"+cart[item]+"</span>"
+
++
+
+"<button class='plus' data-product='"+item+"' style='width:35px;height:35px;'>➕</button>"
+
++
+
+"</div>"
+
++
+
+"<div>₦"+subtotal.toLocaleString()+"</div>"
+
++
+
+"</div>"
+
++
+
+"<button class='remove-item' data-product='"+item+"' style='background:red;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;'>❌</button>"
+
++
+
+"</div>";
+
+message += number + ". " + item + " × " + cart[item] + " = ₦" + subtotal.toLocaleString() + "%0A";
+
+number++;
+
+}
+
+cartTotal.innerText = "Total: ₦" + grandTotal.toLocaleString();
+
+cartModal.style.display = "flex";
+
+document.querySelectorAll(".remove-item").forEach(function(btn){
+
+  document.querySelectorAll(".plus").forEach(function(btn){
+
+btn.addEventListener("click", function(){
+
+const product = this.dataset.product;
+
+cart[product]++;
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+cartModal.style.display = "none";
+cartBox.click();
+
+});
+
+});
+
+document.querySelectorAll(".minus").forEach(function(btn){
+
+btn.addEventListener("click", function(){
+
+const product = this.dataset.product;
+
+cart[product]--;
+
+if(cart[product] <= 0){
+delete cart[product];
+}
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+cartModal.style.display = "none";
+cartBox.click();
+
+});
+
+});
+
+btn.addEventListener("click", function(){
+
+const product = this.dataset.product;
+
+delete cart[product];
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+let total = 0;
+
+for(let item in cart){
+total += cart[item];
+}
+
+cartCount.innerText = total;
+
+cartModal.style.display = "none";
+
+cartBox.click();
+
+});
+
+});
+
+checkoutBtn.onclick = function(){
+
+message += "%0A--------------------%0A";
+message += "TOTAL: ₦" + grandTotal.toLocaleString() + "%0A%0A";
+message += "Thank you.";
+
+window.open(
+"https://wa.me/2348107081375?text=" + message,
+"_blank"
+);
+
+cart = {};
+localStorage.removeItem("cart");
+cartCount.innerText = "0";
+cartModal.style.display = "none";
+
+};
+
+});   // closes cartBox.addEventListener()
+
+closeCart.addEventListener("click", function(){
+
+cartModal.style.display = "none";
+
+});
+
+  const favoriteButtons = document.querySelectorAll(".favorite-btn");
+
+favoriteButtons.forEach(function(button){
+
+button.addEventListener("click",function(){
+
+button.classList.toggle("active");
+
+if(button.classList.contains("active")){
+button.innerHTML="❤️ Favorited";
+}else{
+button.innerHTML="⭐ Favorite";
+}
+
+});
+
+});
+
+const darkModeBtn = document.getElementById("dark-mode-btn");
+
+darkModeBtn.addEventListener("click",function(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+darkModeBtn.innerHTML="☀️";
+}else{
+darkModeBtn.innerHTML="🌙";
+}
+
+});
+
+  const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>300){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+});
+
+topBtn.addEventListener("click",function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+  const counters=document.querySelectorAll(".counter");
+
+counters.forEach(function(counter){
+
+const update=function(){
+
+const target=+counter.dataset.target;
+const count=+counter.innerText;
+
+const increment=Math.ceil(target/100);
+
+if(count<target){
+counter.innerText=count+increment;
+setTimeout(update,20);
+}else{
+counter.innerText=target;
+}
+
+};
+
+update();
+
+});
+
+  const reviews=[
+{
+text:"The birthday cake was absolutely beautiful and delicious!",
+name:"— Blessing A."
+},
+{
+text:"Fast delivery and amazing customer service.",
+name:"— Samuel O."
+},
+{
+text:"The surprise gift box made my sister so happy!",
+name:"— Grace E."
+},
+{
+text:"Highly recommended! I'll definitely order again.",
+name:"— Daniel K."
+}
+];
+
+let reviewIndex=0;
+
+setInterval(function(){
+
+reviewIndex++;
+
+if(reviewIndex>=reviews.length){
+reviewIndex=0;
+}
+
+document.getElementById("testimonial-text").innerText=reviews[reviewIndex].text;
+
+document.getElementById("testimonial-name").innerText=reviews[reviewIndex].name;
+
+},4000);
+
+});
+
+  const faders=document.querySelectorAll(".fade");
+
+const observer=new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+faders.forEach(function(section){
+
+observer.observe(section);
+
+});
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const filterProducts = document.querySelectorAll(".product");
+
+filterButtons.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        const filter = this.dataset.filter;
+
+        filterButtons.forEach(function(btn){
+            btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        filterProducts.forEach(function(product){
+
+            if(filter === "all" || product.dataset.category === filter){
+                product.style.display = "";
+            }else{
+                product.style.display = "none";
+            }
+
+        });
+    
+  const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+// Lightbox
+document.querySelectorAll(".card img, .featured-card img").forEach(function(img){
+
+    img.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        lightbox.style.display = "flex";
+        lightboxImg.src = this.src;
+    });
+
+});
+
+lightbox.addEventListener("click", function(){
+    lightbox.style.display = "none";
+});
+
+// Product Modal
+const modal = document.getElementById("productModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalImage = document.getElementById("modalImage");
+const modalPrice = document.getElementById("modalPrice");
+const modalDescription = document.getElementById("modalDescription");
+const closeProduct = document.getElementById("closeProduct");
+
+document.querySelectorAll(".product").forEach(function(card){
+
+    card.querySelector(".view-btn").addEventListener("click", function(){
+
+        modal.style.display = "flex";
+
+        modalTitle.innerText = card.querySelector("h3").innerText;
+        modalImage.src = card.querySelector("img").src;
+        modalPrice.innerText = card.querySelector(".price").innerText;
+        modalDescription.innerText = card.querySelector("p:last-of-type").innerText;
+
+    });
+
+});
+
+closeProduct.addEventListener("click", function(){
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function(e){
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+});
+
+  window.addEventListener("load",function(){
+
+document.getElementById("loader").style.display="none";
+
+});
+
+</script>
+
+  <div id="toast" class="toast">
+✅ Product added to cart
+  </div>
+
+  <div id="cart-modal" class="cart-modal">
+
+<div class="cart-content">
+
+<h2>🛒 Your Cart</h2>
+
+<div id="cart-items"></div>
+
+<h3 id="cart-total">Total: ₦0</h3>
+
+<button id="checkout-btn">💬 Checkout on WhatsApp</button>
+
+<button id="close-cart">❌ Close</button>
+
+</div>
+
+  </div>
+
+  <button id="topBtn">⬆️</button>
+
+  <div id="lightbox" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:10000;
+">
+
+<img id="lightbox-img"
+style="
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+">
+
+  </div>
+
+<div id="productModal" class="cart-modal">
+
+<div class="cart-content">
+
+<h2 id="modalTitle"></h2>
+
+<img id="modalImage" style="width:100%;border-radius:10px;">
+
+<p id="modalPrice"></p>
+
+<p id="modalDescription"></p>
+
+<button id="closeProduct">Close</button>
+
+</div>
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+</div>
+  
+</body>
+  
+</html>
